@@ -1,0 +1,6 @@
+framework module Pods_IdeaChimp {
+  umbrella header "Pods-IdeaChimp-umbrella.h"
+
+  export *
+  module * { export * }
+}
