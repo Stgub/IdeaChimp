@@ -303,6 +303,9 @@
                                                         <state key="normal" title="Facebook">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="signInFacebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJR-T2-V5k"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaS-Fw-fo4">
                                                         <rect key="frame" x="118" y="305" width="138" height="40"/>

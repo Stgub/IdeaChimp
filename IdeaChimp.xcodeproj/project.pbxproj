@@ -16,9 +16,11 @@
 		19E08AED1DDCC43100BE2C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E08AEC1DDCC43100BE2C82 /* Assets.xcassets */; };
 		19E08AF01DDCC43100BE2C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E08AEE1DDCC43100BE2C82 /* LaunchScreen.storyboard */; };
 		19E08AF81DDCC4A800BE2C82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19E08AF71DDCC4A800BE2C82 /* GoogleService-Info.plist */; };
+		21212236F64E50038BC1CA56 /* Pods_IdeaChimp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5666BECEF020B18B1C7E08D /* Pods_IdeaChimp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195F8B041DF9FAF0000A8EAE /* IdeaChimp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IdeaChimp.entitlements; sourceTree = "<group>"; };
 		196AA0981DEE884600B2FE6E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		196AA09A1DEE8A4A00B2FE6E /* RoundedCornersAndShadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersAndShadows.swift; sourceTree = "<group>"; };
 		196AA0D21DF9A83000B2FE6E /* TextFieldFancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldFancy.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 		19E08AF11DDCC43100BE2C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19E08AF71DDCC4A800BE2C82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9132F395A02BE41EA34FE6CF /* Pods-IdeaChimp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaChimp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaChimp/Pods-IdeaChimp.release.xcconfig"; sourceTree = "<group>"; };
+		C5666BECEF020B18B1C7E08D /* Pods_IdeaChimp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdeaChimp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB667F8861280ACA46CB6E27 /* Pods-IdeaChimp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaChimp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaChimp/Pods-IdeaChimp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21212236F64E50038BC1CA56 /* Pods_IdeaChimp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 		19E08AE41DDCC43100BE2C82 /* IdeaChimp */ = {
 			isa = PBXGroup;
 			children = (
+				195F8B041DF9FAF0000A8EAE /* IdeaChimp.entitlements */,
 				196AA0971DEE882900B2FE6E /* Utilities */,
 				19E08AF91DDCCC7100BE2C82 /* Model */,
 				19E08AFB1DDCCC7E00BE2C82 /* Controller */,
@@ -115,6 +120,7 @@
 		9E7A9F7DC8BBDDFC5DF71B0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5666BECEF020B18B1C7E08D /* Pods_IdeaChimp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +171,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = T4B85P4F7X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -384,9 +395,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = IdeaChimp/IdeaChimp.entitlements;
 				DEVELOPMENT_TEAM = T4B85P4F7X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IdeaChimp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevengraf.IdeaChimp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -399,9 +419,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = IdeaChimp/IdeaChimp.entitlements;
 				DEVELOPMENT_TEAM = T4B85P4F7X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IdeaChimp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevengraf.IdeaChimp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
